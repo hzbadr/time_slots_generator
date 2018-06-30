@@ -18,7 +18,7 @@ class SlotsGenerator
       driver_ids.map do |driver_id|
         generate_daily_activity_for_driver(driver_id, company_ids.sample, fields, time.to_time.to_i)
       end
-    end.flatten
+    end.flatten.shuffle
   end
 
   def call
